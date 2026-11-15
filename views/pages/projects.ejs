@@ -1,1 +1,60 @@
-<p>Explore my projects.</p>
+<p><%
+  const projects = [
+    {
+      title: 'Personal Portfolio Website',
+      details: 'HTML5, CSS3, Git, GitHub',
+      description: 'Developed a four-page portfolio using semantic HTML5 and CSS3 to present my background, projects, and contact information. Applied responsive stylesheets, a custom blue colour scheme, and HTML form validation while tracking development with Git.',
+      repository: 'portfolio'
+    },
+    {
+      title: 'Multi-Site Network Simulation',
+      details: 'Cisco Packet Tracer',
+      description: 'Configured a simulated network connecting Chicago, Mexico, Vancouver, and Toronto. Implemented VLANs, inter-VLAN routing, EtherChannel with LACP and PAgP, OSPF, and BGP. Enabled SSH management and checked connectivity through interface checks and end-to-end ping tests.',
+      repository: '-Multi-Site-Network-Simulation'
+    },
+    {
+      title: 'Chess and Graph Theory Report',
+      details: 'Discrete Mathematics',
+      description: "Authored a report examining graph theory, game trees, search algorithms, Minimax, alpha-beta pruning, and the Knight's Tour problem. This report accompanies the AI Chess Engine project and explains its mathematical foundations.",
+      repository: 'Chess-and-Graph-Theory-Report'
+    },
+    {
+      title: 'AI Chess Engine with Pygame GUI',
+      details: 'Python, Pygame, python-chess',
+      description: 'Developed a Python chess application with a graphical interface for playing against an AI opponent. Used depth-limited Minimax search with alpha-beta pruning and material-based evaluation to select moves, with python-chess enforcing legal moves.',
+      repository: 'CHESS-AI-ENGINE'
+    },
+    {
+      title: 'Three Stacks in a Single Array',
+      details: 'Python',
+      description: 'Developed a Data Structures and Algorithms assignment exploring three stacks sharing a fixed-size array. Implemented push, pop, and peek operations, with middle-stack shifting logic to explore shared storage management and array boundary handling.',
+      repository: 'Three-stacks-in-a-single-array'
+    }
+  ];
+%>
+
+<p class="lead mb-4">
+  A selection of my academic projects, programming assignments, and technical reports.
+</p>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <% for (const project of projects) { %>
+    <div class="col">
+      <article class="card h-100">
+        <div class="card-body d-flex flex-column">
+          <h2 class="card-title h5"><%= project.title %></h2>
+          <p class="text-body-secondary"><%= project.details %></p>
+          <p class="card-text"><%= project.description %></p>
+
+          <a
+            class="btn btn-outline-dark mt-auto align-self-start"
+            href="https://github.com/MuhammadTaahaMahmood-19/<%= project.repository %>"
+            aria-label="View <%= project.title %> on GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            View on GitHub
+          </a>
+        </div>
+      </article>
+    </div>
+  <% } %>
+</div></p>
