@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %> | Taaha's Portfolio</title>
+  <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <%- include('partials/header') %>
+
+  <main class="container py-4 flex-grow-1">
+    <h1><%= title %></h1>
+    <%- include(contentView) %>
+  </main>
+
+  <%- include('partials/footer') %>
+  <script src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
